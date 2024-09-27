@@ -7,11 +7,12 @@
     <meta name="description" content="Home Page Assingment - WDD 131 - Dynamic Web Fundamentals - Pablo Jared Modera Arce">
     <meta name="author" content="Jared Modera">
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
     <header>
         <h1>WDD 131: Dynamic Web Fundamentals - Jared Modera</h1>
-
         <nav>
             <ul class="navigation wrap">
             <li><a href="https://www.linkedin.com/in/jared-modera/" title="Linkedin Profile">LinkedIn</a></li>
@@ -20,31 +21,41 @@
             <li><a href="#" title="Final Project">Final Project</a></li>
             </ul>
         </nav>
-
     </header>
     <main>
         <section class="card">
             <h2>About me</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, quasi similique eius expedita totam vero doloremque corporis ad porro, explicabo, minima ex assumenda. Neque saepe facere blanditiis laboriosam illo porro id aliquam aliquid! Aut voluptatum quasi alias fugiat at atque, repellat, eos officia numquam rem unde qui sit a dolorum?</p>
-            <img src="images/jared-compressed.webp" alt="Image Jared Modera">
-            <h2>Colombia</h2>
-            <img src="images/bandera-de-colombia.png" alt="Image Colombia">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non error nesciunt numquam at explicabo dolor molestiae quam magni a omnis quisquam repellendus officia temporibus tempore, vel deserunt nisi recusandae pariatur modi blanditiis assumenda commodi perferendis dolorum? Animi tempore cum praesentium quia optio iusto sit. Placeat obcaecati excepturi amet deserunt nihil?</p>
+            <div class="about-me">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, quasi similique eius expedita totam vero doloremque corporis ad porro, explicabo, minima ex assumenda. Neque saepe facere blanditiis laboriosam illo porro id aliquam aliquid! Aut voluptatum quasi alias fugiat at atque, repellat, eos officia numquam rem unde qui sit a dolorum?</p>
+                <img src="images/jared-compressed.webp" alt="Image Jared Modera" width="200" height="150">
+            </div>
+            <div class="country">
+                <h3>Colombia</h3>
+                <figure>
+                    <img src="images/bandera-de-colombia.png" alt="Flag of Colombia" width="200">
+                    <figcaption>Official Flag Of Colombia</figcaption>
+                </figure>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non error nesciunt numquam at explicabo dolor molestiae quam magni a omnis quisquam repellendus officia temporibus tempore, vel deserunt nisi recusandae pariatur modi blanditiis assumenda commodi perferendis dolorum? Animi tempore cum praesentium quia optio iusto sit. Placeat obcaecati excepturi amet deserunt nihil?</p>
+            </div>
         </section>
         <section class="card">
             <h2>Web Dev Resources</h2>
+            <div class="resources">
                 <ul>
-                    <li><a href="#">A</a></li>
-                    <li><a href="#">B</a></li>
-                    <li><a href="#">C</a></li>
-                    <li><a href="#">D</a></li>
-                    <li><a href="#">F</a></li>
+                    <li><a href="#">Dev.to Community</a></li>
+                    <li><a href="#">Smashing Magazine</a></li>
+                    <li><a href="#">CSS Tricks</a></li>
+                    <li><a href="#">W3 Schools</a></li>
+                    <li><a href="#">Udemy</a></li>
+                    <li><a href="#">Lorem Picsum Image Placeholder</a></li>
                 </ul>
+            </div>
         </section>
     </main>
     <footer>
-        <p><span id="currentYear"></span>Jared Modera - Colombia</p>
-        <p><span id="lastModified"></span></p>
+        <!-- & for copyrigth symbol and ; -->
+        <p>&copy;<span id="currentYear"></span> Jared Modera - Colombia</p> 
+        <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
 </body>
 </html>

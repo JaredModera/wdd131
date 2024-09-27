@@ -1,20 +1,31 @@
-body {
+* {
     margin: 0;
+}
+
+body {
     height: 100vh;
     grid-template: auto 1fr auto / 1fr auto;
 }
 
 header {
     text-align: center;
-    
     color: antiquewhite;
     grid-column: 1/3;  
 }
 
-header h1 {
+
+h1 {
     background: #193C40; 
     padding: 2rem;
-    margin: 0;
+}
+
+h2 {
+    background-color: #193C40;
+    color: antiquewhite;
+    display: block;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
 nav {
@@ -24,9 +35,7 @@ nav {
 
 .navigation {
     list-style: none;
-    display: flex;
     align-items: center;
-    margin: 0;
 }
 
 .navigation li {
@@ -35,58 +44,90 @@ nav {
 
 .navigation a {
     display: block;
-    padding: 0.75rem;
-    text-decoration: none;
     color: antiquewhite;
     text-align: center;
+    padding: 0.75rem;
+    text-decoration: none;
+    transition: transform 0.3s ease;
 }
 
 .navigation a:hover {
-    font-weight: 700;
+    transform: scale(1.25);
+    font-size: larger;
 }
 
 main {
     display: grid;
     padding: 1rem;
     width: 100%; 
-    max-width: 800px; 
+    max-width: 980px; 
     grid-column: 1 / 3;
     margin: 0 auto;
     grid-template-columns: 2fr 1fr;
 }
 
-.card {
-    border: 1px solid #bbb;
-    border-radius: 10px;
-    margin: 1rem;
-    overflow: hidden;
-}
-
-.card img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    padding: .75rem;
-}
-
-.card h2 {
-    background-color: #193C40;
-    color: antiquewhite;
-    display: block;
-    padding: .7rem 0;
-    text-align: center;
-    margin: 0;
-}
-
-.card p {
-    padding: .75rem;
-}
-    
 footer {
     background: #193C40;
     padding: 2rem;
     text-align: center;
-    grid-column: 1/3;
     color: antiquewhite;
 }
+
+footer p {
+    padding: .75rem;
+}
+
+/* Images */
+img {
+    max-width: 200px;
+    height: auto;
+    margin: .75rem;
+    border: 2px solid #bbb;
     
+}
+
+/* cards in the main */
+.card {
+    border: 1px solid #bbb;
+    border-radius: 1rem;
+    margin: 1rem;
+    overflow: hidden;
+}
+
+
+.card p {
+    padding: .75rem;
+}
+/* Classes inside the card - modifications    */
+.about-me {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.country {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.country h3 {
+    grid-column: 1 / 3;
+    text-align: center;
+    margin: 0 auto;
+    border-bottom: 1px solid #bbb;
+    width: 70%;
+}
+
+.country figure {
+    margin: .75rem;
+    text-align: center;
+}
+
+
+.resources {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    justify-content: center;
+}
