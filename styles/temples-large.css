@@ -1,0 +1,36 @@
+@media screen and (min-width: 840px) {
+    :root {
+        --antiquewhite: rgb(250, 235, 215);
+        --white: rgb(255, 255, 255);
+        --red:  rgb(166, 43, 31);
+        --narnja: rgb(217, 105, 65);
+        --blue:  rgb(25, 60, 64);
+        --light-green: rgb(46, 89, 2);
+        --dark-green: rgb(33, 64, 1);
+    }
+    
+    h1.open {
+        display: block;
+        width: 100%;
+    }
+
+    .navigation {
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: var(--blue);
+    }
+
+    .navigation a {
+        display: block;
+    }
+    
+    .navigation a:hover {
+        color: var(--red);
+        font-weight: 700;
+    }
+
+    /*the "#" is for id and the "." for classes*/
+    #button {
+        display: none;
+    }
+}
