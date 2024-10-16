@@ -17,4 +17,4 @@ const fullName = (first, last) =>  `${first} ${last}`;
 
 document.querySelector("#fullName").innerHTML = fullName(firstName, lastName);
 
-console.log(fullName(firstName, lastName));
+console.log(fullName(firstName, lastName));     
