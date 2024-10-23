@@ -46,3 +46,6 @@ function createSelectItem(products) {
 }
 
 createSelectItem(products);
+
+//Review count
+// On review.html, increment the counter
