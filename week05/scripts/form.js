@@ -1,5 +1,3 @@
-
-
 const products = [
     {
       id: "fc-1888",
@@ -46,6 +44,3 @@ function createSelectItem(products) {
 }
 
 createSelectItem(products);
-
-//Review count
-// On review.html, increment the counter
