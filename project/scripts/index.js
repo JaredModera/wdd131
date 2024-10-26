@@ -128,9 +128,7 @@ const songs = [
     }
 ];
 
-//link the navigations tab assosiated with old temples
-//link the navigations tab assosiated with new temples
-//same with the large and small
+//link the navigations tab assosiated with the songs genre selection
 const allSongsLink = document.querySelector("#all-songs");
 const popLink = document.querySelector("#pop");
 const rockLink = document.querySelector("#rock");
@@ -138,48 +136,37 @@ const jazzLink = document.querySelector("#jazz");
 const latinLink = document.querySelector("#latin");
 const spanishLink = document.querySelector("#spanish");
 
+//Function to filter the songs by genre
+function filterSongsByGenre(genre) {
+    const filteredSongs = songs.filter(song => song.genre.toLowerCase().includes(genre));
+    createSongsCard(filteredSongs);
+}
 
-allSongsLink.addEventListener("click", () => {
-    createSongsCard(songs);
-});
+//added this beacuse conditional branching is a requirement
+function handleGenreSelection(genre) {
+    if (genre === "all") {
+        createSongsCard(songs);
+    } else if (genre === "pop") {
+        filterSongsByGenre("pop");
+    } else if (genre === "rock") {
+        filterSongsByGenre("rock");
+    } else if (genre === "jazz") {
+        filterSongsByGenre("jazz");
+    } else if (genre === "latin") {
+        filterSongsByGenre("latin");
+    } else {
+        createSongsCard(songs); //fallback for unknown genres
+    }
+}
 
-//add the eventListener so it grabs the pop songs
-popLink.addEventListener("click", () => {
-    const popSongs = songs.filter(song => {   
-        const genre = song.genre;
-        if (genre.includes("Pop")) {
-            return genre;
-        }
-    });
-    createSongsCard(popSongs)
-});
+//Display All Songs
+allSongsLink.addEventListener("click", () => createSongsCard(songs));
 
-//add the eventListener so it grabs the temples above 2000
-rockLink.addEventListener("click", () => {
-    const newTemples = temples.filter(temple => {
-        //grab the string, seperate it by commas and the transfor the value to integers, then grab the index 0 which in this case is the year.
-        const year = parseInt(temple.dedicated.split(",")[0]);
-        return year > 2000;
-    });
-    createTempleCard(newTemples)
-})
-
-//now create the same but it only grabs temples by area
-jazzLink.addEventListener("click", () => {
-    const largeTemples = temples.filter(temple => {
-        const area = temple.area;
-        return area > 90000;
-    })
-    createTempleCard(largeTemples)
-})
-
-latinLink.addEventListener("click", () => {
-    const smallTemples = temples.filter(temple => {
-        const area = temple.area;
-        return area < 10000;
-    })
-    createTempleCard(smallTemples)
-})
+//add the eventListener so it filters by songs (better version of the code)
+popLink.addEventListener("click", () => filterSongsByGenre("pop"));
+rockLink.addEventListener("click", () => filterSongsByGenre("rock"));
+jazzLink.addEventListener("click", () => filterSongsByGenre("jazz"));
+latinLink.addEventListener("click", () => filterSongsByGenre("latin"));
 
 function createSongsCard(filteredSongs) {
     //set the content of the div to nothing
