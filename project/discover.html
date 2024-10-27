@@ -8,7 +8,8 @@
     <meta name="description" content="Final Project Jared Modera - Music Tastes Activity">
     <meta name="author" content="Jared Modera">
     <!-- Styles And Links -->
-     <link rel="stylesheet" href="styles/index.css">
+     <link rel="stylesheet" href="styles/discover.css">
+     <link rel="stylesheet" href="styles/discover-large.css">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,22 +24,19 @@
         <!-- title -->
         <h1>Jaste°z</h1>
         <button id="button"></button>
-        
         <!-- navigation -->
-        <nav>
-            <ul class="navigation wrap">
-                <!-- Home page - Discover Songs -->
-                 <li><a href="#" title="active">Home</a></li>
-                <!-- Site review form -->
-                <li><a href="#" title="Site Review">Site Review</a></li>
-                <!-- Top Songs / create cards-->
-                <li><a href="#" title="Top Songs">Your Top Songs</a></li>
-            </ul>
+        <nav class="navigation">
+            <!-- Home page - Discover Songs -->
+            <li><a href="#" title="active">Home</a></li>
+            <!-- Site review form -->
+            <li><a href="#" title="Site Review">Site Review</a></li>
+            <!-- Top Songs / create cards-->
+            <li><a href="#" title="Top Songs">Your Top Songs</a></li>
         </nav>
     </header>
     <!-- Main -->
     <main>
-        <h2 class="title">Temples</h2>
+        <h1 class="title">Songs You Might Like</h1>
         <nav class="genre-navigation">
             <a href="#" id="all-songs">All</a>
             <a href="#" id="pop">Pop</a>
@@ -46,14 +44,14 @@
             <a href="#" id="jazz">Jazz</a>
             <a href="#" id="latin">Latin</a>
         </nav>
-        <div class="song-grid">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugit molestiae nihil dolore esse consequuntur blanditiis saepe vitae totam repellendus tempore exercitationem praesentium sint excepturi labore sed. Culpa sit possimus cupiditate tempora, molestiae sint eum placeat voluptatem reiciendis harum iure exercitationem amet perspiciatis nemo recusandae dolorum! Odio praesentium obcaecati asperiores.</p>
+        <div class="songs-grid">
+            
         </div>
      </main>
      <!-- Footer -->
      <footer>
         <!-- javascript with defer -->
-        <script src="scripts/index.js" defer></script>
+        <script src="scripts/discover.js" defer></script>
         <script src="scripts/getdates.js" defer></script>
         <!-- footer content -->
         <p>&copy;<span id="currentYear"></span> Jared Modera - Colombia</p>

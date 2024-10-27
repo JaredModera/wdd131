@@ -1,0 +1,250 @@
+:root {
+    --black: hsl(0, 0%, 16%);
+    --white-smoke: #eff1ed;
+    --transparent-white: #eff1edc3;
+    --yellow: #ffd13b;
+    --dark-yellow: #be9200;
+}
+
+* {
+    margin: 0;
+    
+}
+/* BODY --------------------------------------------------------------------*/
+body {
+    height: 100vh;
+    font-family:  "Noto Serif", serif;
+    grid-template-columns: 1fr;
+    font-weight: 400;
+    padding: 0;
+    background-color: var(--white-smoke);
+}
+
+/* HEADER --------------------------------------------------------------------*/
+header {
+    background-color: var(--black);
+    color: var(--white-smoke);
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: var(--yellow);
+    padding: 2rem;
+}
+
+h1, h2 {
+    font-family: "Monoton", sans-serif;
+    font-weight: 400;
+    padding: 1rem;
+    margin: 0;
+}
+
+h3 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+p, a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* NAV --------------------------------------------------------------*/
+.navigation {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+}
+
+.navigation a {
+    display: none;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--white-smoke);
+    font-size: 1.5rem;
+    
+    /* transitions */
+    transition: 
+    /* color 0.5s ease, */
+    /* font-size 0.3s ease,
+    padding 0.3s ease, */
+    /* background-color .5s ease, */
+    border-radius .5s ease,
+    box-shadow 1s ease;
+}
+
+/* hover */
+.navigation a:hover {
+    /* color: var(--black); */
+    /* padding: .8rem 2.1rem;
+    font-size: 1.1rem; */
+    /* background-color: var(--white-smoke); */
+    border-radius: 1rem;
+    box-shadow: 0px 0px 25px var(--white-smoke);
+}
+
+.navigation.open { 
+    width: 100%;
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+	display: block;
+    text-align: center;
+}
+
+h1.open {
+    display: none;  /*hide the h1 text when the nav is displayed*/
+}
+
+/* BUTTON -----------------------------------------------------------------*/
+/* small view navigation */
+#button {
+    display: block;
+	font-size: 3rem;
+	border: 0;
+	background: none;
+	color: var(--white-smoke);
+ 	position: absolute;
+	top: 1rem;
+	right: 1rem;
+    padding: 0 1rem;
+}
+
+#button::before {
+	content: "♭";
+}
+
+#button.open::before {
+	content: "♯";
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+	display: block;
+    text-align: center;
+}
+
+h1.open {
+    display: none;  /*hide the h1 text when the nav is displayed*/
+}
+
+/* MAIN------------------------------------------------------------------------------------------ */
+main {
+    max-width: 800px;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+/* this is for the image to be able to shrink and grow accordign to the space available */
+main img {
+    animation: fade 1.5s;
+}   
+
+.songs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+}
+
+.title {
+    text-align: center;
+    margin: 1.2rem;
+    color: var(--black);
+}
+
+/* SECTIONS -------------------------------------------------------------------------------------- */
+section {
+    border: 1px solid #bbb;
+    padding: 1rem;
+    background-color: var(--black);
+    color: var(--white-smoke);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.label {
+    color: var(--yellow);
+}
+
+.songs-div h3, p, a{
+    margin: .7rem;
+}
+
+.songs-div h3 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.songs-div a {
+    display: block;
+    width: 40%;
+    padding: 0.7rem;
+    margin: 0 auto;
+    font-size: 1.3rem;
+    text-align: center;
+    text-decoration: none;
+    
+    /* Colors */
+    color: var(--black);
+    background-color: var(--white-smoke);
+    border: 1px solid var(--white-smoke);
+    
+    /* Border and Radius */
+    border-radius: 1rem;
+    
+    /* Transition Effects */
+    transition: 
+    color 0.3s ease,
+    font-size 0.3s ease,
+    padding 0.3s ease,
+    width 0.7s ease,
+    background-color 1s ease,
+    border-radius 1s ease;
+}
+
+.songs-div a:hover {
+    color: var(--yellow);
+    padding: 0.8rem;
+    font-size: 1.4rem;
+    width: 50%;
+    background-color: #282828;
+    border-radius: 0;
+}
+
+
+section img {
+    margin-top: 1rem;
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 10px var(--white-smoke);
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin: 0;
+    width: 100%;
+    background-color: var(--black);
+    color: var(--white-smoke);
+}
