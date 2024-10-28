@@ -27,15 +27,23 @@
         <!-- navigation -->
         <nav class="navigation">
             <!-- Home page - Discover Songs -->
-            <li><a href="#" title="active">Home</a></li>
+            <li><a href="discover.html" title="home">Home</a></li>
             <!-- Top Songs / create cards-->
-            <li><a href="your-songs.html" title="Songs">Your Songs</a></li>
+            <li><a href="#" title="active">Your Songs</a></li>
             <!-- Site review form -->
             <li><a href="#" title="Site Review">Site Review</a></li>
         </nav>
     </header>
     <!-- Main -->
     <main>
+        <!-- Your Songs -->
+        <h1>📖 Your Songs</h1>
+    
+        <label for="favchap">Enter Book and Chapter: </label>
+        <input type="text" id="favchap" placeholder="Alma 5">
+        <button type="submit" class="fav-button">Add Chapter</button>
+        <ul id="list"></ul>
+
         <h1 class="title">Songs You Might Like</h1>
         <button class="genre-button"></button>
         <nav class="genre-navigation">
@@ -52,8 +60,8 @@
      <!-- Footer -->
      <footer>
         <!-- javascript with defer -->
-        <script src="scripts/discover.js" defer></script>
         <script src="scripts/getdates.js" defer></script>
+        <script src="scripts/your-songs.js" defer></script>
         <!-- footer content -->
         <p>&copy;<span id="currentYear"></span> Jared Modera - Colombia</p>
         <p>Last Modified: <span id="lastModified"></span></p>

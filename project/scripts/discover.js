@@ -1,4 +1,4 @@
-const hamButton = document.querySelector("#button");
+const hamButton = document.querySelector(".button");
 const navigation = document.querySelector(".navigation");
 
 //toggle is adding the class if it doesnt exist or removing it if it does, so qhen qe click it adds the class to the elements listed and applies the styles we asing
@@ -6,6 +6,15 @@ hamButton.addEventListener("click", () => {
     navigation.classList.toggle("open");
     hamButton.classList.toggle("open");
     document.querySelector('h1').classList.toggle('open');
+});
+
+const genreButton = document.querySelector(".genre-button");
+const genreNavigation = document.querySelector(".genre-navigation");
+
+//toggle is adding the class if it doesnt exist or removing it if it does, so qhen qe click it adds the class to the elements listed and applies the styles we asing
+genreButton.addEventListener("click", () => {
+    genreNavigation.classList.toggle("open");
+    genreButton.classList.toggle("open");
 });
 
 
@@ -176,7 +185,7 @@ function createSongsCard(filteredSongs) {
     filteredSongs.forEach(song => {
         let card = document.createElement("section");
         let div = document.createElement("div");
-        let songName = document.createElement("h3");
+        let songName = document.createElement("h2");
         let author = document.createElement("p");
         let genre = document.createElement("p");
         let review = document.createElement("p");
@@ -186,11 +195,11 @@ function createSongsCard(filteredSongs) {
 
         //now assing the values to the elements we just created
         songName.textContent = song.songName;
-        author.innerHTML = `<span class="label">Song author/s:</span> ${song.author}`;
-        genre.innerHTML = `<span class="label">Genre:</span> ${song.genre}`;
-        review.innerHTML = `<span class="label">Review:</span> ${song.review}`;
-        reviewer.innerHTML = `<span class="label">Reviewed by:</span> ${song.reviewer}`;
-        songLink.innerHTML = `<span class="label">Listen On Spotify:</span> ${song.songUrl}`;
+        author.innerHTML = `<span class="label">Song author/s:</span> <br>${song.author}`;
+        genre.innerHTML = `<span class="label">Genre:</span> <br>${song.genre}`;
+        review.innerHTML = `<span class="label">Review:</span> <br>${song.review}`;
+        reviewer.innerHTML = `<span class="label">Reviewed by:</span> <br>${song.reviewer}`;
+        songLink.innerHTML = `<span class="label">Listen On Spotify:</span> <br>${song.songUrl}`;
         //sett a class for the div
         div.setAttribute("class", "songs-div")
         //sett images attributes
@@ -201,7 +210,7 @@ function createSongsCard(filteredSongs) {
         // Set the URL for the song (replace with the actual song URL)
         songLink.href = song.songUrl; 
         // Set the text content of the link
-        songLink.textContent = "Listen to the Song";
+        songLink.textContent = "Spotify";
         songLink.target = "_blank";
 
         div.appendChild(songName);

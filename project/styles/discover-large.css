@@ -18,17 +18,24 @@
     .navigation a {
         display: block;
     }
-
+    /* DIV BUTTON-------------------------------------------------------------------------------------*/
     /*the "#" is for id and the "." for classes*/
-    #button {
+    .button {
         display: none;
     }
 
-    /* GENRE NAVIGATION -------------------------------------------------------------------*/
+    /* GENRE BUTTON-------------------------------------------------------------------------------------*/
+    /*the "#" is for id and the "." for classes*/
+    .genre-button {
+        display: none;
+    }
+
+    /* GENRE NAVIGATION -------------------------------------------------------------------------------------*/
     .genre-navigation {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        margin: 1rem 0;
     }
     
     .genre-navigation a {
@@ -57,7 +64,11 @@
         box-shadow: 0px 0px 20px var(--black);
     }
 
-    /* DIsplay a difrent view for larger ---------------------------------------------------*/
+    .genre-navigation.open {
+        border: none;
+    }
+
+    /* DIsplay a difrent view for larger -------------------------------------------------------------------------------------*/
     .songs-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
