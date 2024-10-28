@@ -37,12 +37,14 @@
     <!-- Main -->
     <main>
         <!-- Your Songs -->
-        <h1>📖 Your Songs</h1>
+        <h1>Your Songs</h1>
     
-        <label for="favchap">Enter Book and Chapter: </label>
-        <input type="text" id="favchap" placeholder="Alma 5">
-        <button type="submit" class="fav-button">Add Chapter</button>
-        <ul id="list"></ul>
+        <label for="favsong">Song You Like: </label>
+        <input type="text" id="favsong" placeholder="Let It Be">
+        <input type="text" id="favsong-author" placeholder="The Beatles">
+        <input type="text" id="favsong-desc" placeholder="Description...">
+        <button type="submit" class="fav-button">Add Song</button>
+        <ul id="songs-list"></ul>
 
         <h1 class="title">Songs You Might Like</h1>
         <button class="genre-button"></button>
@@ -53,7 +55,7 @@
             <a href="#" id="jazz">Jazz</a>
             <a href="#" id="latin">Latin</a>
         </nav>
-        <div class="songs-grid">
+        <div class="fav-songs-grid">
             
         </div>
      </main>
