@@ -2,7 +2,7 @@ const songInput = document.querySelector("#favsong");
 const authorInput = document.querySelector("#favsong-author");
 const descInput = document.querySelector("#favsong-desc");
 const button = document.querySelector(".fav-button");
-const list = document.querySelector("#songs-list");
+const list = document.querySelector(".songs-grid");
 
 let songsArray = getSongList() || [];
 
@@ -48,16 +48,19 @@ function capitalizeFirstOfEachWord(str) {
 
 function displayList(song, author, description) {
     let card = document.createElement("section");
-    let songObjt = document.createElement("li");
+    let songObjt = document.createElement("h3");
     let autObjt = document.createElement("p");
     let descObjt = document.createElement("p");
     let deletebutton = document.createElement("button");
 
-    songObjt.innerHTML = `<span class="label">Song:</span> <br> ${capitalizeFirstOfEachWord(song)}`;
-    autObjt.innerHTML = `<span class="label">Song Author/s:</span> <br> ${capitalizeFirstOfEachWord(author)}`;
-    descObjt.innerHTML = `<span class="label">Song Description/s:</span> <br> ${description}`;
-    deletebutton.textContent = "x";
+    songObjt.innerHTML = `${capitalizeFirstOfEachWord(song)}`;
+    autObjt.innerHTML = `<span class="label">Song Author/s:</span><br>${capitalizeFirstOfEachWord(author)}`;
+    descObjt.innerHTML = `<span class="label">Song Review:</span><br>${description}`;
+    deletebutton.textContent = "Delete Review";
     deletebutton.classList.add("delete");
+
+    card.setAttribute("class", "songs-card");
+    deletebutton.setAttribute("class", "fav-song-button");
 
     card.append(songObjt);
     card.append(autObjt);

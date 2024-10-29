@@ -10,6 +10,7 @@
     <!-- Styles And Links -->
      <link rel="stylesheet" href="styles/discover.css">
      <link rel="stylesheet" href="styles/discover-large.css">
+     <link rel="stylesheet" href="styles/your-songs.css">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,24 +40,22 @@
         <!-- Your Songs -->
         <h1>Your Songs</h1>
     
-        <label for="favsong">Song You Like: </label>
-        <input type="text" id="favsong" placeholder="Let It Be">
-        <input type="text" id="favsong-author" placeholder="The Beatles">
-        <input type="text" id="favsong-desc" placeholder="Description...">
-        <button type="submit" class="fav-button">Add Song</button>
-        <ul id="songs-list"></ul>
+        <h2>Review a Song!</h2>
+        <div class="input-div">
+            <label for="favsong">Song Title: </label>
+            <input type="text" id="favsong" placeholder="Let It Be">
 
-        <h1 class="title">Songs You Might Like</h1>
-        <button class="genre-button"></button>
-        <nav class="genre-navigation">
-            <a href="#" id="all-songs">All</a>
-            <a href="#" id="pop">Pop</a>
-            <a href="#" id="rock">Rock</a>
-            <a href="#" id="jazz">Jazz</a>
-            <a href="#" id="latin">Latin</a>
-        </nav>
-        <div class="fav-songs-grid">
             
+            <label for="favsong-author">Song Author/s: </label>
+            <input type="text" id="favsong-author" placeholder="The Beatles">
+            
+            <!-- <input type="text" id="favsong-desc" class="favsong-desc" placeholder="Review..."> -->
+            <label for="favsong-desc">Review Time: </label>
+            <textarea name="textare" id="favsong-desc" placeholder="Review..."></textarea>
+
+            <button type="submit" class="fav-button">Add Song</button>
+        </div>
+        <div class="songs-grid">
         </div>
      </main>
      <!-- Footer -->
@@ -64,6 +63,7 @@
         <!-- javascript with defer -->
         <script src="scripts/getdates.js" defer></script>
         <script src="scripts/your-songs.js" defer></script>
+        <script src="scripts/buttons.js" defer></script>
         <!-- footer content -->
         <p>&copy;<span id="currentYear"></span> Jared Modera - Colombia</p>
         <p>Last Modified: <span id="lastModified"></span></p>

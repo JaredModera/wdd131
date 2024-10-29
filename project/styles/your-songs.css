@@ -1,0 +1,92 @@
+main h1, h2 {
+    text-align: center;
+    padding: 1rem;
+}
+
+/* LABEL */
+.input-div label {
+    /* display: block; */
+    padding: 1rem 0px 0px 0px;
+    font-size: .9rem;
+    color: var(--yellow);
+}
+/* INPUTS */
+.input-div {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: var(--black);
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.input-div input, textarea{
+    outline: none;
+    background-color: var(--black);
+    border: 1px solid var(--white-smoke);
+    padding: 1rem;
+    margin: 1rem 0;
+    color: var(--white-smoke);
+
+    transition: 
+    box-shadow 1s ease;
+}
+
+.input-div input:focus, textarea:focus {
+    box-shadow: 0px 0px 10px var(--white-smoke);
+}
+
+
+textarea {
+    min-height: 50px; /* Starting height */
+    max-height: 500px; /* Limit maximum height */
+    resize: none; /* Disable manual resizing */
+}
+/* .favsong-desc {
+    height: 7rem;
+} */
+/* BUTTON ----------------------------------------------------------------------------------- */
+
+
+/* SONG SECTIONS -----------------------------------------------------------------------------*/
+.songs-card {
+    border: 1px solid #bbb;
+    padding: 1rem;
+    background-color: var(--black);
+    color: var(--white-smoke);
+    text-align: center;
+    overflow-wrap: break-word; /* Ensure long words break */
+    display: flex;
+    flex-direction: column;
+}
+
+.fav-song-button, .fav-button {
+    display: block;
+    padding: 0.7rem;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    
+    /* Colors */
+    color: var(--black);
+    background-color: var(--white-smoke);
+    border: 1px solid var(--white-smoke);
+    
+    /* Border and Radius */
+    border-radius: 1rem;
+    
+    /* Transition Effects */
+    transition: 
+    color 0.3s ease,
+    font-size 0.3s ease,
+    padding 0.3s ease,
+    background-color 1s ease,
+    border-radius 1s ease;
+}
+
+.fav-song-button:hover, .fav-button:hover {
+    color: var(--yellow);
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    background-color: #282828;
+    border-radius: 0;
+}
