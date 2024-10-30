@@ -10,6 +10,8 @@
     <!-- Styles And Links -->
      <link rel="stylesheet" href="styles/discover.css">
      <link rel="stylesheet" href="styles/discover-large.css">
+     <link rel="stylesheet" href="styles/your-songs.css">
+     <link rel="stylesheet" href="styles/site-review.css">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,34 +29,25 @@
         <!-- navigation -->
         <nav class="navigation">
             <!-- Home page - Discover Songs -->
-            <a href="#" title="active">Home</a>
+            <a href="discover.html" title="home">Home</a>
             <!-- Top Songs / create cards-->
             <a href="your-songs.html" title="Songs">Your Songs</a>
             <!-- Site review form -->
-            <a href="site-review.html" title="Site Review">Site Review</a>
+            <a href="site-review.html" title="active">Site Review</a>
         </nav>
     </header>
     <!-- Main -->
-    <main>
-        <h1 class="title">Songs You Might Like</h1>
-        <button class="genre-button"></button>
-        <nav class="genre-navigation">
-            <a href="#" id="all-songs">All</a>
-            <a href="#" id="pop">Pop</a>
-            <a href="#" id="rock">Rock</a>
-            <a href="#" id="jazz">Jazz</a>
-            <a href="#" id="latin">Latin</a>
-        </nav>
-        <div class="songs-grid">
-            
-        </div>
+    <main class="go-back">
+        <h1>Thank you for your review!</h1>
+        <p>We will use your feedback to improve. Thank you for your review!</p>
+        <ul>
+            <li><a href="site-review.html">Go back</a></li>
+        </ul>
      </main>
      <!-- Footer -->
      <footer>
         <!-- javascript with defer -->
-        <script src="scripts/discover.js" defer></script>
         <script src="scripts/getdates.js" defer></script>
-        <script src="scripts/buttons.js" defer></script>
         <!-- footer content -->
         <p>&copy;<span id="currentYear"></span> Jared Modera - Colombia</p>
         <p>Last Modified: <span id="lastModified"></span></p>

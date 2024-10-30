@@ -1,9 +1,4 @@
 @media screen and (min-width: 840px) {
-    :root {
-        --black: #282828;
-        --white-smoke: #EFF1ED;
-        --yellow: #ffd13b;
-    }
     
     h1.open {
         display: block;

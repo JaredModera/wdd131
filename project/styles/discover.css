@@ -1,10 +1,13 @@
 :root {
-    --black: #292929;
+    /* --black: #292929; */
     --white: #FFFF;
-    --white-smoke: #eff1ed;
+    /* --white-smoke: #eff1ed; */
     --transparent-white: #eff1edc3;
-    --yellow: #ffd13b;
+    /* --yellow: #ffd13b; */
     --dark-yellow: #be9200;
+    --black: #3C3C3C;
+    --white-smoke: #EFF1ED;
+    --yellow: #ffd13b;
 }
 
 * {
@@ -52,13 +55,13 @@ h1 {
     margin: 0;
 }
 
-h2, h3 {
+h2, h3, legend  {
     font-family: "Oswald", sans-serif;
     font-weight: 500;
     font-style: normal;
 }
 
-p, a, button, label, textarea {
+p, a, button, label, textarea, div{
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -211,7 +214,8 @@ main img {
 
 /* SECTIONS ------------------------------------------------------------------------------------- */
 .discover-card {
-    border: 1px solid #bbb;
+    border: 1px solid#bbb;
+    box-shadow: 1px 1px 4px #999;
     padding: 1rem;
     background-color: var(--black);
     color: var(--white-smoke);

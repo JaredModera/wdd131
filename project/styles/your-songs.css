@@ -12,6 +12,8 @@ main h1, h2 {
 }
 /* INPUTS */
 .input-div {
+    border: 1px solid#bbb;
+    box-shadow: 1px 1px 4px #999;
     display: grid;
     grid-template-columns: 1fr;
     background-color: var(--black);
